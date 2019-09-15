@@ -2,7 +2,6 @@
 # Find all executables
 #
 file(GLOB project_SRCS *.cpp *.h)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++17")
 
 #
 # Add executables to project
