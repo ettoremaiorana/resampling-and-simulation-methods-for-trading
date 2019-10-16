@@ -5,9 +5,6 @@
 This project aims to give statistical significance to a list of daily results, possibly coming from a trading algorithm
 run in backtest mode. </p>
 
-The scope of this project was meant to be broader then what it ended up being, but it's my intention to further develop
-and quite possibly refactor it. </p>
-
 At the moment, the project is only able to run a bootstrap analysis, which is nothing more than a resampling method, 
 giving the range of statistical significance of the backtest results. Future development will include monte-carlo testing 
 and bayesian analysis. </p>
@@ -82,26 +79,6 @@ deferred). </p>
 Given a set of user's input, the program should print a table of statistics and their respective statistical confidence 
 interval.  
 
-## How this project addresses Rubics points
-
-Concurrency         | Source files
--------------       | -------------
-Multiple threads    | main.cpp, function 'dispatch_tasks'
-
-Memory management   | Source files
--------------       | -------------
-Pass-by-reference   | financial.cpp, all functions
-
-OO Programming      | Source files
--------------       | -------------
-initialization list | DailyReturnsCsvReader.h, line 11
-access specifiers   | DailyReturnsCsvReader.h
-
-Loop, Functs, I/O   | Source files
--------------       | -------------
-functions           | financial.cpp, stats.cpp, bootstrap.cpp
-read from file      | DailyReturnsCsvReader.cpp reads from csv
-user input          | main.cpp lines 101, 107, 110
 
 ## Testing
 There is a small set of unit tests available, generating a ./test executable along with the main program.
